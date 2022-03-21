@@ -1,0 +1,57 @@
+@import "../elements/TestCase.sass";
+#question-tabs {
+    .program-tabs {
+        position: relative;
+        top: -65px;
+        color: white;
+        left: 56%;
+        background: #1e3a5b;
+        .MuiButtonBase-root {
+            color: white;
+        }
+        .MuiButtonBase-root.Mui-selected {
+            color: #1e3a5b;
+            background: white;
+            border-radius: 4px;
+        }
+        .Mui-disabled {
+            color: lightslategrey;
+        }
+    }
+    .MuiBox-root {
+        padding: 0;
+    }
+    
+   
+    .MuiTabs-indicator{
+        bottom: -5px;
+    }
+    .program-tabpanel{
+        margin-top: -3.4rem;
+    }
+    .vertical-tabs{
+        .testcase-tabpanel
+        { 
+           width: 84%;
+           padding: 1rem;
+        }
+
+    .Mui-selected
+    { 
+        font-weight: 800;
+    }
+
+    }   
+}
+.success{
+    color: #20eb18;
+}
+.failed{
+    color: #eb0c08;
+}
+.coding-timeup-popup{
+    display: grid;
+    place-items: center;
+    height: 98%;
+    font-size: 7rem;
+}
