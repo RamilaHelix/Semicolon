@@ -1,0 +1,94 @@
+[
+    {
+        "progs": [
+            {
+                "sub_id": "06f394d4-a56f-417d-a7ed-1537f18eb457",
+                "script": "/* let's write some code 😈 */\r\n#include<iostream>\r\nusing namespace std;\r\nint main(){\r\n    int a,b;\r\n    cin>>a>>b;\r\n    cout<<a+b;\r\n    return 0;\r\n}",
+                "points": 6,
+                "candidate_id": {
+                    "candidate_id": "407cb7b5-d265-4f46-907f-e703dae77d2c",
+                    "name": "Ramila",
+                    "email": "ramilachoudhary9999@gmail.com",
+                    "contact": "98989398",
+                    "pin": 999999,
+                    "attempted": false,
+                    "contest_id": {
+                        "contest_id": "3",
+                        "name": "Contest 3",
+                        "duration": 30
+                    }
+                }
+            }
+        ],
+        "mcqs": [
+            {
+                "sub_id": "0e3ba0cb-a2d1-485e-8c69-e994d1626267",
+                "right": true,
+                "candidate_id": {
+                    "candidate_id": "12",
+                    "name": "demo",
+                    "email": "demo@gmail.com",
+                    "contact": "3434343",
+                    "pin": null,
+                    "attempted": false,
+                    "contest_id": {
+                        "contest_id": "3",
+                        "name": "Contest 3",
+                        "duration": 30
+                    }
+                }
+            },
+            {
+                "sub_id": "147aa395-8c1e-4e30-b140-76d0d8eb7e2c",
+                "right": false,
+                "candidate_id": {
+                    "candidate_id": "407cb7b5-d265-4f46-907f-e703dae77d2c",
+                    "name": "Ramila",
+                    "email": "ramilachoudhary9999@gmail.com",
+                    "contact": "98989398",
+                    "pin": 999999,
+                    "attempted": false,
+                    "contest_id": {
+                        "contest_id": "3",
+                        "name": "Contest 3",
+                        "duration": 30
+                    }
+                }
+            },
+            {
+                "sub_id": "1a00bb0d-02a0-4807-978f-fbf73aee23da",
+                "right": true,
+                "candidate_id": {
+                    "candidate_id": "12",
+                    "name": "demo",
+                    "email": "demo@gmail.com",
+                    "contact": "3434343",
+                    "pin": null,
+                    "attempted": false,
+                    "contest_id": {
+                        "contest_id": "3",
+                        "name": "Contest 3",
+                        "duration": 30
+                    }
+                }
+            },
+            {
+                "sub_id": "675617de-5ac3-4bc3-9b7c-c83664d9351d",
+                "right": true,
+                "candidate_id": {
+                    "candidate_id": "407cb7b5-d265-4f46-907f-e703dae77d2c",
+                    "name": "Ramila",
+                    "email": "ramilachoudhary9999@gmail.com",
+                    "contact": "98989398",
+                    "pin": 999999,
+                    "attempted": false,
+                    "contest_id": {
+                        "contest_id": "3",
+                        "name": "Contest 3",
+                        "duration": 30
+                    }
+                }
+            }
+        ]
+    }
+]

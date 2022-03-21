@@ -1,0 +1,9 @@
+.input-output {
+    @media (max-width: 800px) {
+        .MuiGrid-root {
+            display: grid;
+            direction: colunm;
+            justify-content: center;
+        }
+    }
+}

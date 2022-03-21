@@ -1,0 +1,16 @@
+.invite-page {
+    @media (max-width: 850px) {
+        .table-content {
+            display: grid;
+        }
+        .card-element {
+            max-width: 365px;
+            margin-top: 1rem;
+            &:last-child {
+                .data-table {
+                    max-height: 500px;
+                }
+            }
+        }
+    }
+}

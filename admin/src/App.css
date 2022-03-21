@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+/* data-table styling classes */
+.img-icon{
+  font-size: 3rem;
+}
+.red-line{
+  border: 2px solid red;
+  line-height: 52px;
+}
+
+.MuiTooltip-tooltip{
+  font-size: 1.3rem !important;
+}
