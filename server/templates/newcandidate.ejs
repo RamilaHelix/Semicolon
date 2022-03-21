@@ -1,0 +1,12 @@
+<% if(typeof locals.name !="undefined" && locals.name) { %>
+    <h2>
+        Hi,
+        <%= locals.name %>
+    </h2>
+    <% } %>
+        <br />
+        <% if(typeof locals.pin !="undefined" && locals.pin) { %>
+            <h5>
+                Your pin, <%= locals.pin %>
+            </h5>
+            <% } %>
