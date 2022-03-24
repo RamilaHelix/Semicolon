@@ -13,6 +13,7 @@ export default function DemoBasic() {
             boilerplateCodeJS: "",
             testCases: [{
                 testcase_id: "1",
+                hidden: false,
                 points: 4,
                 output: "5",
                 input: `10 5
@@ -31,6 +32,7 @@ export default function DemoBasic() {
                 output: "5",
                 points: 4,
                 testcase_id: "2",
+                hidden: false,
                 input: `10 5
                     1 0 1 0 1
                     0 0 1 0 0

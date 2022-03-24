@@ -114,6 +114,7 @@ export default function AddCodingQue(props) {
       ...testCase,
       {
         testcase_id: Math.random().toString(36).slice(2),
+        hidden: false,
         points,
         output: sampleOutput,
         input: sampleInput,
