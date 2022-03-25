@@ -79,7 +79,7 @@ function App() {
                 <Route path="/endtest" element={<EndTest />} />
                 <Route path="/" element={<StartTest />} />
                 {contest.contest_id ?
-                    <Route element={<TestLayout timeUp={timeEnd} time={contest.duration} />}>
+                    <Route element={<TestLayout timeUp={timeEnd} time={contest.duration * 30} />}>
                         <Route path="/menu" element={(programmingQuestion || mcqs) &&
                             <MenuPage programmingQuestion={programmingQuestion} mcqs={mcqs} />}
                         />

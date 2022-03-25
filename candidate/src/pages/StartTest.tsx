@@ -9,20 +9,20 @@ function isEmpty(obj) {
 }
 
 export default function StartTest() {
-    const [pin, setPin] = React.useState('263087')
+    const [pin, setPin] = React.useState('')
     const [open, setOpen] = React.useState(false)
     const navigation = useNavigate();
     const { setContest } = useContext();
 
     const varifyCandidate = () => {
-        setContest({
-            contest_id: '3',
-            candidate_id: '407cb7b5-d265-4f46-907f-e703dae77d2c',
-            name: 'HelixStack',
-            duration: 61 * 60
-        })
-        navigation('/menu')
-        return
+        // setContest({
+        //     contest_id: '3',
+        //     candidate_id: '407cb7b5-d265-4f46-907f-e703dae77d2c',
+        //     name: 'HelixStack',
+        //     duration: 61 * 60
+        // })
+        // navigation('/menu')
+        //return
 
         if (pin.length === 6) {
             semicolonApi('candidate/' + pin, {}, 'GET')

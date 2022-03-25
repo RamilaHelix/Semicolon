@@ -9,7 +9,6 @@ import SignUp from "./pages/SignUp";
 import "./App.css";
 import Stepper from "./pages/Stepper";
 import ResponsiveAppBar from "./Header/Nav";
-import Ques from "./pages/Ques";
 import AddCodingQue1 from "./components/AddCodingQue1";
 function App() {
 
@@ -17,24 +16,24 @@ function App() {
 
   return (
     <Router>
-      {/* <Routes>
-        <Route path="/s" element={<Stepper />} />
-        <Route path="/nav" element={<Nav />} />
+      <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        { //user?.admin_id ?
-          <Route>
-            <Route path="createtest"
-              element={(!user?.contest_id) ? (<CreateTest />) :
-                (<Navigate to={"/adminpanel"} replace />)}
-            />
-            <Route path="/adminpanel" element={<AdminPanel />} />
-            <Route path="/invite" element={<Invite />} />
+        {user?.admin_id ?
+          <Route element={<ResponsiveAppBar />}>
+            <Route>
+              <Route path="createtest"
+                element={(!user?.contest_id) ? (<Stepper />) :
+                  (<Navigate to={"/adminpanel"} replace />)}
+              />
+              <Route path="/adminpanel" element={<AdminPanel />} />
+              <Route path="/invite" element={<Invite />} />
+            </Route>
           </Route>
-          // : <Route path="/" element={<SignIn />} />
+          : <Route path="/" element={<SignIn />} />
         }
-      </Routes> */}
-      <Routes>
+      </Routes>
+      {/* <Routes>
         <Route element={<ResponsiveAppBar />}>
           <Route path="/createtest" element={<Stepper />} />
           <Route path="/adminpanel" element={<AdminPanel />} />
@@ -42,8 +41,7 @@ function App() {
         </Route>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/" element={<SignIn />} />
-        <Route path="/edi" element={<AddCodingQue1 />} />
-      </Routes>
+      </Routes>*/}
     </Router>
   );
 }

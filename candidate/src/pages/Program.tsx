@@ -139,6 +139,7 @@ const Program: React.FC<Question> = React.forwardRef((props, ref) => {
             .then((result: any[]) => {
                 setLoading(false);
                 setError(null)
+                console.log(result)
                 setOutputs(result);
 
             })

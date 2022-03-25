@@ -75,7 +75,7 @@ export default function HorizontalNonLinearStepper() {
     let img: boolean = false;
     const disable = ((coding.length > 0 ? false : true) || !((mcqDuration > 0 ? false : true) && (mcqs.length > 0 ? false : true)))
     //const disabled = disable && (name.length > 0 ? false : true)
-    const disabled = ((coding.length > 0 ? false : true) || (mcqs.length > 0 ? false : true))
+    const disabled = ((coding ? false : true) || (mcqs ? false : true))
     console.log((false) || (true))
     const closeAlert = () => {
         setOpen({ open: false, msg: '' })
@@ -108,8 +108,7 @@ export default function HorizontalNonLinearStepper() {
         duration += mcqDuration ?? 0;
 
         const contest = { admin_id: user?.admin_id, name, duration };
-        console.log(mcqs)
-        console.log(coding)
+
         semicolonApi('contest/create', contest, "POST")
             .then((res: any) => {
                 let id = res.contest;

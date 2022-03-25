@@ -38,7 +38,7 @@ function DataTable({ data }) {
     //const columns = keys //.filter((key: string) => !key.includes('id'))
 
     return (
-        <table style={{ borderCollapse: 'collapse' }} border={1}>
+        <table style={{ borderCollapse: 'collapse' }} data-border={1}>
             <thead >
                 <tr>
                     {data[0] && keys.map((heading: string) => <th style={{ padding: '0 3px' }} key={heading}>{heading.toUpperCase()}</th>)}

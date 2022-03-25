@@ -19,33 +19,29 @@ export class SubmitProgramService {
 
   constructor(
     @InjectRepository(SubmitProgram)
-    private submitProgramRepository: Repository<SubmitProgram>,
-
-    // @InjectRepository(Program)
-    // private programRepository: Repository<Program>,
-    // @InjectRepository(TestCase)
-    // private testRepository: Repository<TestCase>
-  ) { }
+    private submitProgramRepository: Repository<SubmitProgram>) { }
 
   runScript(createSubmitDto: CreateSubmitDto) {
     const { candidate_id, language, script } = createSubmitDto
-    const testCases = createSubmitDto.testCases;
+    let testCases = createSubmitDto.testCases;
 
     const cand = path.join(candidate_id, language)
     const dir = path.join(__dirname, '../..', 'scripts', cand);
-
     const inputs = [];
-    testCases.forEach(test => { inputs.push(test.input) })
+    testCases = testCases.filter(test => !test.hidden)
+
+    testCases.forEach(test => {
+      inputs.push(test.input)
+    })
 
     function validateTestCases(outputs): any[] {
-      //return outputs
       const response = [];
       testCases.forEach((testcase, index) => {
         response.push({
-          output: outputs[index].message,
+          output: outputs[index]?.message,
           input: testcase.input,
           expected: testcase.output,
-          passed: testcase.output === outputs[index].message ?
+          passed: testcase.output === outputs[index]?.message ?
             true : false
         })
       })
@@ -82,10 +78,10 @@ export class SubmitProgramService {
   submit(createSubmitDto: CreateSubmitDto) {
 
     const { candidate_id, contest_id, language, prog_id, script } = createSubmitDto
-    let marks = 0
     const testCases = createSubmitDto.testCases;
     const cand = path.join(candidate_id, language)
     const dir = path.join(__dirname, '../..', 'scripts', cand);
+    let marks = 0
     const inputs = [];
     let outputs = [];
     testCases.forEach(test => {
@@ -135,13 +131,7 @@ export class SubmitProgramService {
       }
       const comment = "\n>>>>>>>>>>>>>>>>>>>>>>>> Outputs <<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n"
       const output = comment.concat(outputs.reduce((a, v) => a + v + '\n', []))
-      // const dir2 = path.join(__dirname, '../..', 'scripts', candidate_id);
-      // if (existsSync(dir2)) {
-      //   console.log(dir2)
-      //   //rimraf(dir2, () => { console.log('delter') });
-      //   rmdirSync(dir2);
-      //   return;
-      // }
+
       return this.submitProgramRepository.findOne({ prog_id, candidate_id }).then((res) => {
         if (res) {
           const sub_id = res.sub_id;

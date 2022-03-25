@@ -172,7 +172,7 @@ export default function BasicEditor(props: EditorProps) {
       fontSize="1.7rem"
     >
       <div
-        className="editor"
+        className="button-container"
         style={{
           display: "flex",
           justifyContent: "end",

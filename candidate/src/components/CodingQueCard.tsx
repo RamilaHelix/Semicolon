@@ -42,12 +42,24 @@ const CodingQueCard: React.FC<CardComponentProps> = ({ title, question,
                 >
                     Input:&nbsp;
                     <Typography variant='subtitle1' component="span">
-                        {input}
+                        {
+                            input.split('\n').map(inp => {
+                                return (
+                                    <span key={inp}>{inp}<br /></span>
+                                )
+                            })
+                        }
                     </Typography >
                     <br />
                     Output:&nbsp;
                     <Typography variant="subtitle1" component="span">
-                        {output}
+                        {
+                            output.split('\n').map(out => {
+                                return (
+                                    <span key={out}>{out}<br /></span>
+                                )
+                            })
+                        }
                     </Typography>
                 </Typography>
             </CardActions>

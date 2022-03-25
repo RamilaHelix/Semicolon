@@ -49,7 +49,7 @@ const TestLayout: React.FC<Layout> = ({ timeUp, time }) => {
     } = useTimer({
         expiryTimestamp, onExpire: () => {
             if (!timeUpt) {
-                endTest("expire")
+                // endTest("expire")
             }
             console.warn("onExpire called")
         },
@@ -141,7 +141,7 @@ const TestLayout: React.FC<Layout> = ({ timeUp, time }) => {
             // setTimeUpt(true);
             // timeUp("warning")
             // setOpen(true);
-            endTest("warning")
+            //endTest("warning")
         }
         return () => { }
     }, [warning.count])
