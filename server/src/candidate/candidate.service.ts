@@ -64,7 +64,7 @@ export class CandidateService {
         if (candidate)
           if (!candidate.attempted) {
             return this.candidateRepository.update({ candidate_id: candidate.candidate_id },
-              { attempted: false }).then(() => { return { candidate } })
+              { attempted: true, pin: null }).then(() => { return { candidate } })
           }
         throw ({ error: 'Pin Not Found ..!' })
       })
