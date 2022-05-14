@@ -92,7 +92,8 @@ const BasicTable: React.FC<BasicTableProps> = (props) => {
     }
     const handleDeleteRow = (id: number | string) => {
         setRows([...rows.filter((row: any) => row.id !== id)])
-        if (props.deletedId && id > -1) props.deletedId(id)
+        if (props.deletedId)
+            props.deletedId(id)
     }
 
     React.useEffect(() => {

@@ -104,7 +104,9 @@ export default function Invite() {
 
     const [candidate, setCandidate] = useState<candidate[]>([])
     const [inviteCandidate, setInviteCandidate] = useState<Candidate[]>([])
+
     const deletedCandidates = (id: number | string | undefined) => {
+        console.log(id)
         setInviteCandidate([...inviteCandidate.filter((row) => row.email !== id)])
     }
 
@@ -159,7 +161,7 @@ export default function Invite() {
                     deletedId={(id) => deletedCandidates(id)}
                 />
             </CardElement>
-            <CardElement title={'Submitted Candidates report '}
+            {/* <CardElement title={'Submitted Candidates report '}
                 subheader={candidate[0]?.contest_id?.name}
                 sx={{ maxWidth: 500, }} >
                 <BasicTable export={true} height={654}
@@ -185,7 +187,7 @@ export default function Invite() {
                         },
                     ]}
                     deletedId={(id) => { }} />
-            </CardElement>
+            </CardElement> */}
         </Box>
     </div>
 }
